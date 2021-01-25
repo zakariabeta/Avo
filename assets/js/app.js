@@ -21,8 +21,5 @@
 //   app.init();
 // })(jQuery);
 $(document).ready(function() {
-  $( ".landing-page .contant" ).addClass('animation');
-  setTimeout(function() { 
-    $( ".landing-page .contant p" ).addClass('show');
-  }, 3500);
+  AOS.init();
 })
