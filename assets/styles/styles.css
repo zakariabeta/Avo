@@ -30,12 +30,12 @@ nav {
   background-color: #082938;
 }
 
-nav .full-image {
-  max-width: 60px;
+nav .logo {
+  max-height: 60px;
 }
 
 @media screen and (min-width: 576px) {
-  nav .full-image {
+  nav .logo {
     max-height: 75px;
     width: auto;
   }
@@ -141,6 +141,16 @@ nav #navbarSupportedContent .navbar-nav .nav-item .nav-link::before {
   color: #082938;
 }
 
+.section_banner--law {
+  background-color: #082938;
+}
+
+@media screen and (min-width: 576px) {
+  .section_banner--law {
+    padding: 40px 0;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .section_banner--law .logolaw {
     max-height: 150px;
@@ -150,6 +160,9 @@ nav #navbarSupportedContent .navbar-nav .nav-item .nav-link::before {
     -webkit-transform: translateY(-150px);
             transform: translateY(-150px);
   }
+  .section_banner--law .logolaw:hover .lawcontent .lawimg {
+    opacity: 0;
+  }
 }
 
 .section_banner--law .logolaw .lawcontent {
@@ -158,6 +171,8 @@ nav #navbarSupportedContent .navbar-nav .nav-item .nav-link::before {
 }
 
 .section_banner--law .logolaw .lawcontent .lawimg {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   margin: 0 auto;
   width: 50%;
   height: 150px;
