@@ -123,12 +123,13 @@ nav #navbarSupportedContent .navbar-nav .nav-item .nav-link::before {
 }
 
 .section_banner--apropos {
-  padding: 16px 0px;
+  padding: 20px 0px;
 }
 
 .section_banner--apropos h2 {
   text-transform: uppercase;
   margin-top: 20px;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -141,12 +142,12 @@ nav #navbarSupportedContent .navbar-nav .nav-item .nav-link::before {
   color: #082938;
 }
 
-.section_banner--law {
+.section_banner--law .lawlogos {
   background-color: #082938;
 }
 
 @media screen and (min-width: 576px) {
-  .section_banner--law {
+  .section_banner--law .lawlogos {
     padding: 40px 0;
   }
 }
@@ -186,4 +187,21 @@ nav #navbarSupportedContent .navbar-nav .nav-item .nav-link::before {
   text-align: center;
   padding: 20% 0;
   color: white;
+}
+
+.section_banner--contact {
+  padding: 20px 0;
+}
+
+.section_banner--contact .input-row {
+  margin-bottom: 12px;
+}
+
+.section_banner--contact .input-row label {
+  width: 100%;
+}
+
+.section_banner--contact .input-row label .input-field {
+  min-width: 50%;
+  margin-top: 8px;
 }
