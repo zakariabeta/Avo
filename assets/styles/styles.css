@@ -10301,15 +10301,27 @@ footer a {
 }
 
 footer .footer-text .nomsoustitre p {
-  font-size: 30px;
+  font-size: 27px;
   margin-bottom: 0;
   line-height: 1;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
 
+@media screen and (min-width: 576px) {
+  footer .footer-text .nomsoustitre p {
+    font-size: 30px;
+  }
+}
+
 footer .footer-text .nomsoustitre span {
-  font-size: 13px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 576px) {
+  footer .footer-text .nomsoustitre span {
+    font-size: 13px;
+  }
 }
 
 footer .footer-text .emailp span, footer .footer-text .siteweb span, footer .footer-text .tel span {
