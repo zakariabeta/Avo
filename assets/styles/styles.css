@@ -10534,9 +10534,10 @@ footer .logo-social .social a:hover i {
 
 .section_banner--contact .btn-submit {
   display: block;
-  margin: 8px auto;
+  margin: 8px auto 16px;
   padding: 12px 40px;
   border: none;
+  background-color: #efefef;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
