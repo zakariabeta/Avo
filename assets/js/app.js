@@ -1,4 +1,6 @@
 (function ($) {
+  
+  var breakpointMobile = 575;
   app = {
     init: function () {
       app.Headroom();
@@ -31,9 +33,14 @@
         // Element target
         var myElement = document.querySelector("header");
         var headroom = new Headroom(myElement);
-  
+
         // initialise settings
-        headroom.offset = 0;//px
+        headroom.offset = 110;//px
+        
+        if ($(window).width() <= breakpointMobile) {
+        // initialise settings
+        headroom.offset = 98;//px
+        }
   
         headroom.init(options);
       }
