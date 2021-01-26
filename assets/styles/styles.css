@@ -10180,6 +10180,16 @@ a.text-dark:hover, a.text-dark:focus {
   outline: none;
 }
 
+body {
+  padding-top: 94px;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    padding-top: 110px;
+  }
+}
+
 section {
   max-width: 100vw;
 }
@@ -10515,4 +10525,49 @@ footer .logo-social .social a:hover i {
   margin: 8px auto;
   padding: 12px 40px;
   border: none;
+}
+
+.headroom {
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background: rgba(25, 99, 190, 0.9);
+}
+
+.headroom.headroom--pinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  box-shadow: 0px 5px 7px -4px rgba(181, 175, 175, 0.2);
+}
+
+.headroom.headroom--pinned.headroom--top {
+  position: fixed;
+  box-shadow: none;
+}
+
+.headroom.headroom--pinned.headroom--not-top {
+  background: #1963be;
+}
+
+.headroom.headroom--top {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.headroom.menu-centre {
+  top: 10.625rem;
+}
+
+.headroom.menu-centre.headroom--top {
+  -webkit-transform: translateY(170);
+          transform: translateY(170);
 }
