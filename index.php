@@ -150,7 +150,7 @@
                   </div>
                   <div class="input-row">
                     <label>Subject<span class="info" id="subject-info"></span><br>
-                      <input id="subject" name="subject" type="text" value="" name="subject">
+                      <input class="input-field" id="subject" name="subject" type="text" value="" name="subject">
                     </label>
                   </div>
                   <div class="input-row">
@@ -219,5 +219,7 @@
     <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
     <script src="assets/js/vendor/headroom.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/js-validator.js"></script>
   </body>
 </html>
