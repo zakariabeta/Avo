@@ -31,8 +31,8 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav"> 
               <li class="nav-item"><a class="nav-link" href="../en.html">home</a></li>
-              <li class="nav-item"><a class="nav-link" href="../en.html">à propos</a></li>
-              <li class="nav-item"><a class="nav-link" href="../en.html">CONTACTEZ NOUS</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section_banner--apropos">à propos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section_banner--contact">CONTACTEZ NOUS</a></li>
             </ul>
           </div>
         </div>
@@ -48,7 +48,7 @@
           </div>
         </div>
       </section>
-      <section class="section_banner--apropos">
+      <section class="section_banner--apropos" id="section_banner--apropos">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
@@ -132,7 +132,7 @@
           </div>
         </div>
       </section>
-      <section class="section_banner--contact">
+      <section class="section_banner--contact" id="section_banner--contact">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
@@ -140,22 +140,22 @@
                 <form name="frmContact" id="" method="post" action="" enctype="multipart/form-data" onsubmit="return validateContactForm()">
                   <div class="input-row">
                     <label>votre nom<span class="info" id="userName-info"></span><br>
-                      <input class="input-field" id="userName" type="text" name="userName">
+                      <input class="input-field" id="name" name="nom" type="text" value="">
                     </label>
                   </div>
                   <div class="input-row">
                     <label>Email<span class="info" id="userEmail-info"></span><br>
-                      <input class="input-field" id="userEmail" type="text" name="userEmail">
+                      <input class="input-field" id="email" name="email" type="text" value="">
                     </label>
                   </div>
                   <div class="input-row">
                     <label>Subject<span class="info" id="subject-info"></span><br>
-                      <input class="input-field" id="subject" type="text" name="subject">
+                      <input id="subject" name="subject" type="text" value="" name="subject">
                     </label>
                   </div>
                   <div class="input-row">
                     <label>Message<span class="info" id="userMessage-info"></span><br>
-                      <textarea class="input-field" id="content" name="content" cols="60" rows="6"></textarea>
+                      <textarea class="input-field" id="message" name="message" cols="60" rows="6"></textarea>
                     </label>
                   </div>
                   <div>
@@ -163,6 +163,27 @@
                     <div id="statusMessage"></div>
                   </div>
                 </form>
+                <?php
+                      if(isset($_POST['message'])){
+                          $entete  = 'MIME-Version: 1.0' . "\r\n";
+                          $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+                          $entete .= 'From: ' . $_POST['email'] . "\r\n";
+
+                          $message = '<h1>Message envoyé depuis le formulaire de Contact de zakaria.beta77@gmail.com</h1>
+                          <p><b>Nom : </b>' . $_POST['nom'] . '</p>
+                          <p><b>Prénom : </b>' . $_POST['subject'] . '</p>
+                          <p><b>Email : </b>' . $_POST['email'] . '</p>
+                          <p><b>Message : </b>' . $_POST['message'] . '</p>';
+
+                          $retour = mail('zakaria.beta77@gmail.com', 'Envoi depuis formulaire de Contact', $message, $entete);
+                          if($retour) {
+                              echo '<p class="alert alert-success">Votre message a bien été envoyé.</p>';
+                          }
+                          else{
+                              echo '<p class="alert alert-danger">Une erreur s\'est produite lors de la tentative d\'envoi de votre message. Veuillez réessayer plus tard.</p>';
+                          }
+                  } ?>
+
               </div>
             </div>
             <div class="col-sm-6">
